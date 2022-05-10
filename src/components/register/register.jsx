@@ -4,7 +4,7 @@ import { AccountCircle, Visibility, VisibilityOff } from "@mui/icons-material";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { signUp, signInWithGoogle } from "../../database/firebase/Auth";
+import { signUp } from "../../database/firebase/Auth";
 import {
   Separator,
   InputForm,

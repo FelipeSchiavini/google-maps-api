@@ -1,5 +1,4 @@
 import { collection, addDoc, onSnapshot, query } from "firebase/firestore";
-import { getProducts } from "./products";
 import "../config";
 import firestore from "../firestore";
 

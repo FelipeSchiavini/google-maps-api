@@ -10,7 +10,6 @@ import { RegisterStorage } from "../modal/insert-storage";
 import options, { marker } from "./options";
 import CollapsibleTable from "../utils/table";
 import { Separator } from "../../styles";
-import env from "react-dotenv";
 import { useNavigate } from "react-router-dom";
 import { getAuth } from "firebase/auth";
 

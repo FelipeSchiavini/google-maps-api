@@ -1,4 +1,3 @@
-import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import { useForm } from "react-hook-form";
 import React from "react";
@@ -10,18 +9,15 @@ import {
   ModalWrapper,
 } from "../../styles";
 import { ModalStorage, Text } from "./modal.style";
-import StorageController from "../../controller/storage";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SucessAlert, ErrorAlert } from "../utils/index";
 import { Image } from "../../styles";
 import { addProduct } from "../../database/firebase/products";
-import { Separator } from "../../styles";
 
 export const RegisterProduct = (props) => {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
   const [showSucess, setShowSucess] = useState(false);
@@ -34,9 +30,9 @@ export const RegisterProduct = (props) => {
         amount: data.amount,
         price: data.price,
       });
+      e.target.reset();
       setShowSucess(true);
       setTimeout(() => {
-        e.target.reset();
         props.handleClose();
         setShowError(false);
         setShowSucess(false);

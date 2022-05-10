@@ -21,7 +21,7 @@ import {
   Form,
   Wrapper,
 } from "../../styles";
-import { SucessAlert, ErrorAlert } from "../utils";
+import { SucessAlert } from "../utils";
 
 const Login = () => {
   const {
@@ -31,9 +31,6 @@ const Login = () => {
   } = useForm();
   const navigate = useNavigate();
   const [showSucess, setShowSucess] = useState(false);
-  const [showError, setShowError] = useState(false);
-
-  console.log(process.env);
 
   const onSubmit = (data) => {
     loginWithEmailAndPassword(
@@ -73,10 +70,6 @@ const Login = () => {
         {showSucess && (
           <SucessAlert message="Logado com " strongMessage="Sucesso!" />
         )}
-        {showError && (
-          <ErrorAlert message="Armazem não foi criado " strongMessage="Erro" />
-        )}
-
         <Image
           width="250px"
           src={require("../../images/logo-removebg-preview.png")}

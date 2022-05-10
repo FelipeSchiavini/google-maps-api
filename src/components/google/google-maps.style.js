@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Button from "@mui/material/Button";
-import { Autocomplete } from "@react-google-maps/api";
 
 export const AutocompleteGoogle = styled(Button)`
   @media screen and (max-width: 48em) {

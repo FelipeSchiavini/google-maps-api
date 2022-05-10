@@ -1,10 +1,4 @@
-import {
-  collection,
-  addDoc,
-  getDocs,
-  query,
-  updateDoc,
-} from "firebase/firestore";
+import { collection, getDocs, query, updateDoc } from "firebase/firestore";
 import firestore from "../firestore";
 
 export const addProduct = (storage, product) => {

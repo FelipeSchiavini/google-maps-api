@@ -1,4 +1,4 @@
-import * as firebase from "../config";
+import "../config";
 import {
   getAuth,
   signInWithEmailAndPassword,
